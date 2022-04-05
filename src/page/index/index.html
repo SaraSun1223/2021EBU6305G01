@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body >
+    <div class="header">
+        <span>The Silk Road</span>
+    </div>
+    <div class='ribbon'>
+                <a href='#' onclick="a('../home/home.html')"><span>Home</span></a>
+                <a href='#' onclick="a('../geography/geography.html')"><span>Geography</span></a>
+                <a href='#' onclick="a('../culture/culture.html')"><span>Culture</span></a>
+                <a href='#' onclick="a('../personage/personage.html')"><span>Personage</span></a>
+                <a href='#' onclick="a('../economics/economics.html')"><span>Economics</span></a>
+                <a href='#' onclick="a('../politics/politics.html')"><span>Politics</span></a>
+                <a href='#' onclick="a('../game/game.html')"><span>Game</span></a>
+        </div>
+    <div class="contain">
+
+    </div>
+        
+    
+
+    <script src="../../js/rem.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function a(url){
+            $.get(url,function(data){
+                $(".contain").empty().append(data);
+            });
+        }
+    </script>
+</body>
+</html>
