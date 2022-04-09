@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="culture.css">
     <title>culture</title>
-</head>
-<body >
-   
-    <div class='culture'>
-              <span>this page is culture!</span> 
-        </div>
 
-        
+</head>
+
+<body>
+
+    <div class='Topbar' align=center>
+        <span>this page is culture!</span>
+    </div>
+        <ul class="top-nav">
+            <li><a href="#">Four Great Inventions</a>
+                <ul>
+                    <li id="huoyao"><a href="#" onclick="Choose('../culture/huoyao.html')">火药</a>   
+                    <li id="zhinanzhen"><a href="#" onclick="Choose('../geography/geography.html')">指南针</a>
+                    <li id="zaozhishu"><a href="#" onclick="Choose(this.id)">造纸术</a></li>
+                    <li id="huoziyinshua"><a href="#" onclick="Choose(this.id)">活字印刷</a></li>
+                </ul>
+            </li>
+            <li><a href="#" >Slik</a></li>
+            <li><a href="#">Xuanzang</a>
+                <ul>
+                    <li><a href="#">Journey to the West</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Marco Polo and His Travels</a></li>
+        </ul>
+        <div class="contain" >
+            <span>this page is culture!</span>
+        </div>
+    
     </div>
 
    
+
+    <script src="../../js/rem.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../page/index/index.js"></script>
+    <script src="culture.js"></script>
+
 </body>
+
 </html>
