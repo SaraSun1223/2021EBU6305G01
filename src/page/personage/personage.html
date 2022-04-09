@@ -5,17 +5,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>personage</title>
+    <link rel="stylesheet" href="personage.css">
+    <link rel="stylesheet" href="../../js/element-ui/index.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script> -->
+    <script src="../../js/vue.min.js"></script>
+    <script src="../../js/element-ui/index.js"></script>
+    <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
    
 </head>
 <body >
-   
+    <div id="app">
+    
     <div class='personage'>
-              <span>this page is personage!</span> 
-        </div>
-
-        
+              <!-- <p>{{message}}</p>  -->
+              <p class="title">Personage</p> 
+              <div class="block">
+                <el-timeline>
+                  <el-timeline-item timestamp="the Western Han Dynasty(202B.C.-8A.D.)" placement="top">
+                    <div class="card-panel">
+                    <el-card>
+                      <h4>Zhang Qian</h4>
+                      <p>张骞</p>
+                    </el-card>
+                    <el-card>
+                        <h4>Huo Qu Bing</h4>
+                        <p>霍去病</p>
+                      </el-card>
+                    <el-card>
+                        <h4>Han Wu Di</h4>
+                        <p>汉武帝</p>
+                    </el-card>
+                    </div>
+                  </el-timeline-item>
+                  <el-timeline-item timestamp="the Jin Dynasty(265-420A.D.)" placement="top">
+                    <div class="card-panel">
+                        <el-card>
+                          <h4>鸠摩罗什</h4>
+                          <p>Jiu Mo Luo Shen</p>
+                        </el-card>
+                        <el-card>
+                            <h4>He Xi Ru Jia</h4>
+                            <p>河西儒家</p>
+                        </el-card>
+                        </div>
+                  </el-timeline-item>
+                  <el-timeline-item timestamp="the Sui Dynasty(581-618A.D.)" placement="top">
+                    <div class="card-panel">
+                        <el-card>
+                          <h4>隋炀帝</h4>
+                          <p>Sui Yang Di</p>
+                        </el-card>
+                        </div>
+                  </el-timeline-item>
+                  <el-timeline-item timestamp="the Tang Dynasty(618-907A.D.)" placement="top">
+                    <div class="card-panel">
+                    <el-card>
+                      <h4>敦煌画师</h4>
+                      <p>Dun Huang Hua Shi</p>
+                    </el-card>
+                    </div>
+                  </el-timeline-item>
+                  <el-timeline-item timestamp="the Yuan Dynasty(1271-1368A.D.)" placement="top">
+                    <div class="card-panel">
+                        <el-card>
+                          <h4>敦煌画师</h4>
+                          <p>Dun Huang Hua Shi</p>
+                        </el-card>
+                        </div>
+                  </el-timeline-item>
+                  <el-timeline-item timestamp="the Ming and Qing Dynasties(1368-1912A.D.)" placement="top">
+                    <el-card>
+                      <h4>更新 Github 模板</h4>
+                      <p>王小虎 提交于 2018/4/2 20:46</p>
+                    </el-card>
+                  </el-timeline-item>
+                  <el-timeline-item timestamp="the Mordern time(1912-)" placement="top">
+                    <el-card>
+                      <h4>更新 Github 模板</h4>
+                      <p>王小虎 提交于 2018/4/2 20:46</p>
+                    </el-card>
+                  </el-timeline-item>
+                </el-timeline>
+              </div>
     </div>
 
+    </div>  
+    </div>
+<script src="personage.js"></script>
+
+<script>
+//     import ElementUI from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
+    var app=new Vue({
+    el:'#app',
+    data:function(){
+        return{
+            message:"this page is personage!"
+        }
+    }
+})
+</script>
    
 </body>
 </html>
+<style lang="scss" scoped>
+    .title{
+        margin-left:100px;
+        font-family: Microsoft YaHei;
+        font-size: 48px;
+        color:#3E3E3E;
+    }
+    .card-panel{
+    margin-right:50px;
+    display:flex;
+    }
+</style>
