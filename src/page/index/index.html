@@ -12,16 +12,16 @@
         <span>The Silk Road</span>
     </div>
     <div class='ribbon'>
-                <a href='#' onclick="a('../home/home.html')"><span>Home</span></a>
-                <a href='#' onclick="a('../geography/geography.html')"><span>Geography</span></a>
-                <a href='#' onclick="a('../culture/culture.html')"><span>Culture</span></a>
-                <a href='#' onclick="a('../personage/personage.html')"><span>Personage</span></a>
-                <a href='#' onclick="a('../economics/economics.html')"><span>Economics</span></a>
-                <a href='#' onclick="a('../politics/politics.html')"><span>Politics</span></a>
-                <a href='#' onclick="a('../game/game.html')"><span>Game</span></a>
+            <a href='#' onclick="a('../home/home.html')"><span>Home</span></a>
+            <a href='#' onclick="a('../geography/geography.html')"><span>Geography</span></a>
+            <a href='#' onclick="a('../culture/culture.html')"><span>Culture</span></a>
+            <a href='#' onclick="a('../personage/personage.html')"><span>Personage</span></a>
+            <a href='#' onclick="a('../economics/economics.html')"><span>Economics</span></a>
+            <a href='#' onclick="a('../politics/politics.html')"><span>Politics</span></a>
+            <a href='#' onclick="a('../game/game.html')"><span>Game</span></a>
         </div>
     <div class="contain">
-
+        
     </div>
         
     
@@ -29,6 +29,8 @@
     <script src="../../js/rem.js"></script>
     <script src="../../js/jquery.min.js"></script>
     <script type="text/javascript">
+        window.onload=function(){
+            a('../home/home.html')}
         function a(url){
             $.get(url,function(data){
                 $(".contain").empty().append(data);
