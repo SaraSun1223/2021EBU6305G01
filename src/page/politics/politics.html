@@ -1,20 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>culture</title>
-</head>
-<body >
-   
-    <div class='politics'>
-              <span>this page is politics!</span> 
-        </div>
+    
 
+ <style>
+     
+    .main{height: 50px;border: 1px green;}
+    /* 按钮设置 */
+    button:active{ box-shadow: 0 5px #666;transform: translateY(4px);}
+    button:focus{outline:none;}
+    button{ height: 50px; width: 150px;}
+    
+    .TimerShaft{
+        position:absolute;
+        left:10%;top:85%;
+        height: 12%; width: 73%;
+        background-image: url(images/TimerShaft.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /* 时间轴上的四个按钮 */
+    .btn1{
+        position:absolute;
+        left:17%;top:80%;
+    }
+    .btn2{
+        position:absolute;
+        left:34%;top:80%;
+    }
+    .btn3{
+        position:absolute;
+        left:51%;top:80%;
+    }
+    .btn4{
+        position:absolute;
+        left:68%;top:80%;
+    }
+    /* 第一张网页的圆形按钮，A代表第一页 */
+    #btn_CirclerA1{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:20%;top:38%;
+        background-image: url(images/1.png);
+        background-size: cover;
+    }
+    #btn_CirclerA2{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:43%;top:53%;
+        background-image: url(images/Horse.png);
+        background-size: cover;
+    }
+    #btn_CirclerA3{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:55%;top:30%;
+        background-image: url(images/Trade.png);
+        background-size: cover;
+    }
+    /* 第二张网页的圆形按钮,B代表第二页 */
+    #btn_CirclerB1{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:7%;top:60%;
+        background-image: url(images/1.png);
+        background-size: cover;
+    }
+    #btn_CirclerB2{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:23%;top:51%;
+        background-image: url(images/Horse.png);
+        background-size: cover;
+    }
+    #btn_CirclerB3{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:52%;top:55%;
+        background-image: url(images/Trade.png);
+        background-size: cover;
+    }
+    /* 第三张网页的圆形按钮,B代表第二页 */
+    #btn_CirclerC1{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:17.5%;top:30%;
+        background-image: url(images/1.png);
+        background-size: cover;
+    }
+    #btn_CirclerC2{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:27%;top:25%;
+        background-image: url(images/Horse.png);
+        background-size: cover;
+    }
+    #btn_CirclerC3{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:52%;top:55%;
+        background-image: url(images/Trade.png);
+        background-size: cover;
+    }
+    /* 第四张网页的圆形按钮,B代表第二页 */
+    #btn_CirclerD1{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:7%;top:60%;
+        background-image: url(images/1.png);
+        background-size: cover;
+    }
+    #btn_CirclerD2{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:23%;top:51%;
+        background-image: url(images/Horse.png);
+        background-size: cover;
+    }
+    #btn_CirclerD3{
+        height: 6%; width: 3%;
+        border-radius: 50%;
+        position:absolute;
+        left:52%;top:55%;
+        background-image: url(images/Trade.png);
+        background-size: cover;
+    }
+    
+    /* 第一张网页的文本框，A代表第一页 */
+    .textarea_A1{
+        display: none;
+        position:absolute;
+        left:22.5%;top:44%;
+        width: 10%;height: 14%;
+    }
+    .textarea_A2{
+        display: none;
+        position:absolute;
+        left:46%;top:55%;
+        width: 10%;height: 14%;
+    }
+    .textarea_A3{
+        display: none;
+        position:absolute;
+        left:57.5%;top:36%;
+        width: 10%;height: 14%;
         
-    </div>
-
+    }
+    /* 第二张网页的文本框，A代表第一页 */
+    .textarea_B1{
+        display: none;
+        position:absolute;
+        left:9%;top:45%;
+        width: 10%;height: 14%;
+    }
+    .textarea_B2{
+        display: none;
+        position:absolute;
+        left:25%;top:37%;
+        width: 10%;height: 14%;
+    }
+    .textarea_B3{
+        display: none;
+        position:absolute;
+        left:54%;top:40%;
+        width: 10%;height: 14%;
+        
+    }
+    /* 第三张网页的文本框，A代表第一页 */
+    .textarea_C1{
+        display: none;
+        position:absolute;
+        left:9%;top:45%;
+        width: 10%;height: 14%;
+    }
+    .textarea_C2{
+        display: none;
+        position:absolute;
+        left:25%;top:37%;
+        width: 10%;height: 14%;
+    }
+    .textarea_C3{
+        display: none;
+        position:absolute;
+        left:54%;top:40%;
+        width: 10%;height: 14%;
+        
+    }
+    /* 第四张网页的文本框，A代表第一页 */
+    .textarea_D1{
+        display: none;
+        position:absolute;
+        left:9%;top:45%;
+        width: 10%;height: 14%;
+    }
+    .textarea_D2{
+        display: none;
+        position:absolute;
+        left:25%;top:37%;
+        width: 10%;height: 14%;
+    }
+    .textarea_D3{
+        display: none;
+        position:absolute;
+        left:54%;top:40%;
+        width: 10%;height: 14%;
+        
+    }
+ </style>
+ 
+</head>
+<body style = "background-image: url(images/MainMap.png);
+                background-repeat: no-repeat;
+                background-size: 100%";>
    
+    <div class="main">       
+        <script>
+            /* 时间轴 */
+            // window.onload = function() {undefined
+            // var bigImg = document.createElement("img"); //创建一个img元素
+            // bigImg.src = "images/TimerShaft.png"; //给img元素的src属性赋值
+            // bigImg.width = document.body.offsetWidth*0.7; //320个像素 不用加px
+            // var myp = document.getElementById('myp'); //获得dom对象
+            // myp.appendChild(bigImg); //为dom添加子元素img
+            // };
+            // 鼠标悬停显示文本框
+            function Show_Info(obj){
+                var div = document.getElementById(obj);
+                if (div.style.display == "block") {
+                    div.style.display = "none";
+                } 
+                else {
+                    div.style.display = "block";
+                }
+
+                // document.getElementById("textarea_First").style.display = "block";   
+            } 
+            function Show_FirstPage(){
+
+                // 隐藏其他页面的按钮
+                document.getElementById("btn_CirclerB1").style.display = "none";
+                document.getElementById("btn_CirclerB2").style.display = "none";
+                document.getElementById("btn_CirclerB3").style.display = "none";
+                document.getElementById("btn_CirclerC1").style.display = "none";
+                document.getElementById("btn_CirclerC2").style.display = "none";
+                document.getElementById("btn_CirclerC3").style.display = "none";
+                document.getElementById("btn_CirclerD1").style.display = "none";
+                document.getElementById("btn_CirclerD2").style.display = "none";
+                document.getElementById("btn_CirclerD3").style.display = "none";
+                // 显示第一页的按钮
+                document.getElementById("btn_CirclerA1").style.display = "block";
+                document.getElementById("btn_CirclerA2").style.display = "block";
+                document.getElementById("btn_CirclerA3").style.display = "block";
+
+                document.body.style.backgroundImage = "url(images/MainMap.png)";
+                document.body.style.backgroundRepeat = "no-repeat";
+                document.body.style.backgroundSize = "100%";
+            }
+
+            function Show_SecondPage(){
+                // 隐藏其他页面的按钮
+                document.getElementById("btn_CirclerA1").style.display = "none";
+                document.getElementById("btn_CirclerA2").style.display = "none";
+                document.getElementById("btn_CirclerA3").style.display = "none";
+                document.getElementById("btn_CirclerC1").style.display = "none";
+                document.getElementById("btn_CirclerC2").style.display = "none";
+                document.getElementById("btn_CirclerC3").style.display = "none";
+                document.getElementById("btn_CirclerD1").style.display = "none";
+                document.getElementById("btn_CirclerD2").style.display = "none";
+                document.getElementById("btn_CirclerD3").style.display = "none";
+                // 显示第二页的按钮
+                document.getElementById("btn_CirclerB1").style.display = "block";
+                document.getElementById("btn_CirclerB2").style.display = "block";
+                document.getElementById("btn_CirclerB3").style.display = "block";
+
+                document.body.style.backgroundImage = "url(images/Second_Page.png)";
+                document.body.style.backgroundRepeat = "no-repeat";
+                // document.body.style.backgroundSize = "100%";
+                document.body.style.height = "100%";
+                //document.body.style.width = "100%";
+            }
+
+            function Show_ThirdPage(){
+                // 隐藏其他页面的按钮
+                document.getElementById("btn_CirclerA1").style.display = "none";
+                document.getElementById("btn_CirclerA2").style.display = "none";
+                document.getElementById("btn_CirclerA3").style.display = "none";
+                document.getElementById("btn_CirclerB1").style.display = "none";
+                document.getElementById("btn_CirclerB2").style.display = "none";
+                document.getElementById("btn_CirclerB3").style.display = "none";
+                document.getElementById("btn_CirclerD1").style.display = "none";
+                document.getElementById("btn_CirclerD2").style.display = "none";
+                document.getElementById("btn_CirclerD3").style.display = "none";
+                // 显示第三页的按钮
+                document.getElementById("btn_CirclerC1").style.display = "block";
+                document.getElementById("btn_CirclerC2").style.display = "block";
+                document.getElementById("btn_CirclerC3").style.display = "block";
+
+                document.body.style.backgroundImage = "url(images/Third_Page.png)";
+                document.body.style.backgroundRepeat = "no-repeat";
+                // document.body.style.backgroundSize = "100%";
+                document.body.style.height = "100%";
+                //document.body.style.width = "100%";
+            }
+
+            function Show_FourthPage(){
+                // 隐藏其他页面的按钮
+                document.getElementById("btn_CirclerA1").style.display = "none";
+                document.getElementById("btn_CirclerA2").style.display = "none";
+                document.getElementById("btn_CirclerA3").style.display = "none";
+                document.getElementById("btn_CirclerB1").style.display = "none";
+                document.getElementById("btn_CirclerB2").style.display = "none";
+                document.getElementById("btn_CirclerB3").style.display = "none";
+                document.getElementById("btn_CirclerC1").style.display = "none";
+                document.getElementById("btn_CirclerC2").style.display = "none";
+                document.getElementById("btn_CirclerC3").style.display = "none";
+                // 显示第三页的按钮
+                document.getElementById("btn_CirclerD1").style.display = "block";
+                document.getElementById("btn_CirclerD2").style.display = "block";
+                document.getElementById("btn_CirclerD3").style.display = "block";
+
+                document.body.style.backgroundImage = "url(images/Fourth_Page.png)";
+                document.body.style.backgroundRepeat = "no-repeat";
+                // document.body.style.backgroundSize = "100%";
+                document.body.style.height = "100%";
+                //document.body.style.width = "100%";
+            }
+        </script>
+        <!-- <div id="myp" style="position: absolute; 
+                            left: 10%; top: 85%;
+                            
+                            ;"
+        ></div> -->
+        <!-- 第一页的组件 -->
+        <div>
+            <button class="TimerShaft"></button>
+            <button class="btn1" id="" onclick="Show_FirstPage()">Precursors</button>
+            <button class="btn2" onclick="Show_SecondPage()">Initiation in China</button>
+            <button class="btn3" onclick="Show_ThirdPage()">Evolution</button>
+            <button class="btn4" onclick="Show_FourthPage()">New Silk Road</button>
+            <button id="btn_CirclerA1" onmouseover="Show_Info('A1')" onmouseleave="Show_Info('A1')"></button>
+            <button id="btn_CirclerA2" onmouseover="Show_Info('A2')" onmouseleave="Show_Info('A2')"></button>
+            <button id="btn_CirclerA3" onmouseover="Show_Info('A3')" onmouseleave="Show_Info('A3')"></button>
+            <textarea class = "textarea_A1"name="" id="A1" cols="30" rows="10" >良种马及其他适合长距离运输的动物也开始不断被人们所使用，令大规模的贸易文化交流成为可能。比如阿拉伯人的经常使用耐渴、耐旱、耐饿的单峰骆驼，在公元前11世纪便用于商旅运输。</textarea>
+            <textarea class = "textarea_A2"name="" id="A2" cols="30" rows="10" >欧亚大陆腹地是广阔的草原和肥沃的山谷，对于游牧民族和商队运输的牲畜而言可以随时随地安定下来，就近补给水、食物和燃料。这样一来一支商队、旅行队或军队可以在沿线各君主制国家没有注意到他们的存在或激发敌意的情况下，进行长期，持久而路途遥远的旅行。</textarea>
+            <textarea class = "textarea_A3"name="" id="A3" cols="30" rows="10" >早期的丝绸之路上并不是以丝绸为主要交易物资，在公元前15世纪左右，东亚商人就已经出入塔克拉玛干沙漠边缘，购买产自现新疆地区的和田玉石，同时出售海贝等沿海特产，同中亚地区进行小规模贸易往来。</textarea>
+        </div>
+        
+        <script>
+            
+        </script>
+        <!-- 第二页的组件 -->
+        <div>
+            <button id="btn_CirclerB1" onmouseover="Show_Info('B1')" onmouseleave="Show_Info('B1')" style="display: none;"></button>
+            <button id="btn_CirclerB2" onmouseover="Show_Info('B2')" onmouseleave="Show_Info('B2')" style="display: none;"></button>
+            <button id="btn_CirclerB3" onmouseover="Show_Info('B3')" onmouseleave="Show_Info('B3')" style="display: none;"></button>
+            <textarea class = "textarea_B1"name="" id="B1" cols="30" rows="10" ></textarea>
+            <textarea class = "textarea_B2"name="" id="B2" cols="30" rows="10" ></textarea>
+            <textarea class = "textarea_B3"name="" id="B3" cols="30" rows="10" ></textarea>
+        </div>
+        <!-- 第三页的组件 -->
+        <div>
+            <button id="btn_CirclerC1" onmouseover="Show_Info('C1')" onmouseleave="Show_Info('C1')" style="display: none;"></button>
+            <button id="btn_CirclerC2" onmouseover="Show_Info('C2')" onmouseleave="Show_Info('C2')" style="display: none;"></button>
+            <button id="btn_CirclerC3" onmouseover="Show_Info('C3')" onmouseleave="Show_Info('C3')" style="display: none;"></button>
+            <textarea class = "textarea_C1"name="" id="C1" cols="30" rows="10" >Roman Empire (30 BCE-3rd century CE)</textarea>
+            <textarea class = "textarea_C2"name="" id="C2" cols="30" rows="10" >Byzantine Empire (6th-14th centuries)</textarea>
+            <textarea class = "textarea_C3"name="" id="C3" cols="30" rows="10" >Tang dynasty (7th century)</textarea>
+        </div>
+        <!-- 第四页的组件 -->
+        <div>
+            <button id="btn_CirclerD1" onmouseover="Show_Info('D1')" onmouseleave="Show_Info('D1')" style="display: none;"></button>
+            <button id="btn_CirclerD2" onmouseover="Show_Info('D2')" onmouseleave="Show_Info('D2')" style="display: none;"></button>
+            <button id="btn_CirclerD3" onmouseover="Show_Info('D3')" onmouseleave="Show_Info('D3')" style="display: none;"></button>
+            <textarea class = "textarea_D1"name="" id="D1" cols="30" rows="10" ></textarea>
+            <textarea class = "textarea_D2"name="" id="D2" cols="30" rows="10" ></textarea>
+            <textarea class = "textarea_D3"name="" id="D3" cols="30" rows="10" ></textarea>
+        </div>
+    </div>
 </body>
 </html>
+
+
