@@ -1,21 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>economics</title>
-    
-</head>
-<body >
-   
-    <div class='economics'>
-              <span>this page is Economics!</span> 
-        </div>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        
+      #header{
+          height: 62px;
+          background: #eff4fa;
+          display: flex;
+          justify-content: space-between;  /*分布两边*/
+          align-items: center;   /*垂直居中*/
+          padding: 0 2em;        /*左右留余*/
+      }
+      #Ancient{
+          height: 400px;
+          display: flex;
+          justify-content: space-between;  /*分布两边*/
+      }
+      #Modern{
+          height: 400px;
+          display: flex;
+          justify-content: space-between;  /*分布两边*/
+      }
 
+      #Modern #modernWord{
+          border: solid #eff4fa;
+          flex: 2 1 0;
+          background-image: url(images/modernPhoto.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      #Modern #modernPhoto{
+          border: solid #eff4fa;
+          flex: 1 1 0;
+          background-image: url(images/一带一路.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      #Ancient #ancientWord{
+        border: solid #eff4fa;
+          flex: 2 1 0;
+          background-image: url(images/ancientWord.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      #Ancient #ancientPhoto{
+        border: solid #eff4fa;
+          flex: 1 1 0;
+          background-image: url(images/ancientPhoto.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      #footer{
+          height: 40px;
+          background: #eff4fa;
+          display: flex;
+          justify-content: center;
+      }
+
+    </style>
+
+    <script>
+        /* 时间轴 */
+             window.onload = function() {undefined
+             var bigImg = document.createElement("img"); //创建一个img元素
+             bigImg.src = "images/logo1.jpg"; //给img元素的src属性赋值
+             bigImg.width = 80; //320个像素 不用加px
+             bigImg.height = 31; //320个像素 不用加px
+             var myp = document.getElementById('myp'); //获得dom对象
+             myp.appendChild(bigImg); //为dom添加子元素img
+             };
+            // 鼠标悬停显示文本框
+    </script>
+</head>
+
+<body>
+<div id="header">
+    <div id="myp"></div>
+    <div id="english">English</div>
+</div>
+<div id="Ancient">
+    <div id="ancientWord">
+        <p>
+            古代丝绸之路经济介绍
+        </p>
+    </div>
+    <div id="ancientPhoto">
         
     </div>
 
-   
+       
+</div> 
+
+<div id="Modern">
+    <div id="modernWord">
+        <p>
+            现代丝绸之路经济介绍
+        </p>
+    </div>
+    <div id="modernPhoto">
+       
+    </div>
+</div>
+<div id="footer">
+    <p>
+        违法和不良信息举报电话:010-88047123 京ICP证060535号 京公网安备 11000002000018号 京网文[2014]0383-083号
+网上传播视听节目许可证号 0102002  新出网证（京）字098号  中国互联网视听节目服务自律公约
+    </p>
+</div> 
 </body>
 </html>
