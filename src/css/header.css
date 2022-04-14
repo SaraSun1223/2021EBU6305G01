@@ -11,6 +11,7 @@
     top: 0;
     }
 .ribbon {
+    width:100%;background-color: #f7e4aa;
     white-space: nowrap;
     /* display:inline-block; */display:flex;
     position: sticky;z-index: 99;

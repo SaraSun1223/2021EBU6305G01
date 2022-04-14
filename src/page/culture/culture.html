@@ -6,12 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="culture.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <script src="../../js/jquery.min.js"></script>
     <title>culture</title>
 
 </head>
 
-<body>
-
+<body style="margin:0">
+    <div class="header">
+        <span>The Silk Road</span>
+      </div>
+      <div class='ribbon' id="header">
+        <a href='../home/home.html'><span>Home</span></a>
+        <a href='../geography/geography.html'><span>Geography</span></a>
+        <a href='../culture/culture.html'><span style="background-color: #FFD204;">Culture</span></a>
+        <a href='../personage/personage.html' ><span>Personage</span></a>
+        <a href='../economics/economics.html'><span>Economics</span></a>
+        <a href='../politics/politics.html'><span>Politics</span></a>
+        <a href='../game/game.html'><span>Game</span></a>
+    </div>
     <div class='Topbar' align=center>
         <span>this page is culture!</span>
     </div>
@@ -44,7 +57,17 @@
     <script src="../../js/jquery.min.js"></script>
     <script src="../../page/index/index.js"></script>
     <script src="culture.js"></script>
-
+    <script type="text/javascript">//让导航栏吸附到顶部
+        window.addEventListener('scroll', function(){
+          let t = $('body, html').scrollTop();   // 目前监听的是整个body的滚动条距离
+          if(t>190){
+             $('.ribbon').addClass('box-active')
+         }else{
+             $('.ribbon').removeClass('box-active')
+         }
+      })
+     
+     </script> 
 </body>
 
 </html>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="../../js/jquery.min.js"></script> 
+    <link rel="stylesheet" href="../../css/header.css">
     <style>
         html,body{
             margin: 0;
@@ -78,6 +80,18 @@
 </head>
 
 <body>
+    <div class="header">
+        <span>The Silk Road</span>
+      </div>
+      <div class='ribbon'>
+        <a href='../home/home.html'><span>Home</span></a>
+        <a href='../geography/geography.html'><span>Geography</span></a>
+        <a href='../culture/culture.html'><span>Culture</span></a>
+        <a href='../personage/personage.html' ><span>Personage</span></a>
+        <a href='../economics/economics.html'><span style="background-color: #FFD204;">Economics</span></a>
+        <a href='../politics/politics.html'><span>Politics</span></a>
+        <a href='../game/game.html'><span>Game</span></a>
+    </div>
 <div id="header">
     <div id="myp"></div>
     <div id="english">English</div>
@@ -111,5 +125,19 @@
 网上传播视听节目许可证号 0102002  新出网证（京）字098号  中国互联网视听节目服务自律公约
     </p>
 </div> 
+
+
+</script><!-- zrq加的 -->
+<script type="text/javascript">//让导航栏吸附到顶部
+   window.addEventListener('scroll', function(){
+ 	let t = $('body, html').scrollTop();   // 目前监听的是整个body的滚动条距离
+ 	if(t>190){
+		$('.ribbon').addClass('box-active')
+	}else{
+		$('.ribbon').removeClass('box-active')
+	}
+ })
+
+</script> 
 </body>
 </html>
