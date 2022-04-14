@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
-
+    <link rel="stylesheet" href="../../css/header.css"> <!-- zrq加的 -->
+    <script src="../../js/jquery.min.js"></script> <!-- zrq加的 -->
  <style>
-     
+   .hide{
+            top: -60px;
+        }  
     .main{height: 50px;border: 1px green;}
     /* 按钮设置 */
     button:active{ box-shadow: 0 5px #666;transform: translateY(4px);}
@@ -221,10 +223,21 @@
  
 </head>
 <!-- 背景图片 -->
-<body style = "background-image: url(../../img/MainMap.png);
+<body style = "margin:0;
+                background-image: url(../../img/MainMap.png);
                 background-repeat: no-repeat;
-                background-size: 100%";>
+                background-size: 100%";
+                >
    
+      <div class='ribbon' id="header"><!-- zrq加的 -->
+        <a href='../home/home.html'><span>Home</span></a>
+        <a href='../geography/geography.html'><span>Geography</span></a>
+        <a href='../culture/culture.html'><span>Culture</span></a>
+        <a href='../personage/personage.html' ><span>Personage</span></a>
+        <a href='../economics/economics.html'><span>Economics</span></a>
+        <a href='../politics/politics.html'><span style="background-color: #FFD204;">Politics</span></a>
+        <a href='../game/game.html'><span>Game</span></a>
+      </div>
     <div class="main">       
         <script>
             /* 时间轴 */
@@ -389,6 +402,19 @@
             <textarea class = "textarea_D3"name="" id="D3" cols="30" rows="10" ></textarea>
         </div>
     </div>
+    <script>
+    $(function(){
+        window.addEventListener('scroll', this.handleScroll)
+            $(window).scroll(function() {
+            var end_height = $(document).scrollTop();//触发滚动事件后，滚动条的高度（本次高度）
+            if (end_height > navigation_height){ //触发后的高度 与 元素的高度对比
+                $('.header').addClass('hide');
+            }else {
+                $('.header').removeClass('hide');
+            }
+        });
+    });
+</script>
 </body>
 </html>
 
