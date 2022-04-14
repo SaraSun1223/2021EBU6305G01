@@ -5,64 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>personage</title>
-    <link rel="stylesheet" href="personage.css">
     <link rel="stylesheet" href="../../js/element-ui/index.css">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script> -->
+    <link rel="stylesheet" href="../../css/header.css">
     <script src="../../js/vue.min.js"></script>
     <script src="../../js/element-ui/index.js"></script>
-    <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+    <script src="../../js/jquery.min.js"></script> 
+    
+    
    
 </head>
-<body >
+<body style="margin:0">
     <div id="app">
-    
+      <div class="header">
+        <span>The Silk Road</span>
+      </div>
+      <div class='ribbon' id="header">
+        <a href='../home/home.html'><span>Home</span></a>
+        <a href='../geography/geography.html'><span>Geography</span></a>
+        <a href='../culture/culture.html'><span>Culture</span></a>
+        <a href='../personage/personage.html' ><span style="background-color: #FFD204;">Personage</span></a>
+        <a href='../economics/economics.html'><span>Economics</span></a>
+        <a href='../politics/politics.html'><span>Politics</span></a>
+        <a href='../game/game.html'><span>Game</span></a>
+    </div>
     <div class='personage'>
               <!-- <p>{{message}}</p>  -->
               <p class="title">Personage</p> 
               <div class="block">
                 <el-timeline>
-                  <el-timeline-item timestamp="the Western Han Dynasty(202B.C.-8A.D.)" placement="top">
+                  <el-timeline-item timestamp="the Western Han Dynasty(202B.C.-8A.D.)" placement="top" >
                     <div class="card-panel">
                     <el-card>
                       <h4>Zhang Qian</h4>
                       <p>张骞</p>
+                      <img src="images/zhangqian.png" style="width:200px;height:100px;" />
                     </el-card>
                     <el-card>
                         <h4>Huo Qu Bing</h4>
                         <p>霍去病</p>
+                        <img src="images/huoqubing.png" style="width:200px;height:100px;" />
                       </el-card>
                     <el-card>
                         <h4>Han Wu Di</h4>
                         <p>汉武帝</p>
+                        <img src="images/huoqubing.png" style="width:200px;height:100px;" />
                     </el-card>
                     </div>
                   </el-timeline-item>
-                  <el-timeline-item timestamp="the Jin Dynasty(265-420A.D.)" placement="top">
+                  <el-timeline-item timestamp="the Jin Dynasty(265-420A.D.)" placement="top" >
                     <div class="card-panel">
                         <el-card>
-                          <h4>鸠摩罗什</h4>
-                          <p>Jiu Mo Luo Shen</p>
+                          <h4>Jiu Mo Luo Shen</h4>
+                          <p>鸠摩罗什</p>
+                          <img src="images/huoqubing.png" style="width:200px;height:100px;" />
                         </el-card>
                         <el-card>
                             <h4>He Xi Ru Jia</h4>
                             <p>河西儒家</p>
+                            <img src="images/huoqubing.png" style="width:200px;height:100px;" />
                         </el-card>
                         </div>
                   </el-timeline-item>
-                  <el-timeline-item timestamp="the Sui Dynasty(581-618A.D.)" placement="top">
+                  <el-timeline-item timestamp="the Sui Dynasty(581-618A.D.)" placement="top" @click="beCenter()">
                     <div class="card-panel">
                         <el-card>
-                          <h4>隋炀帝</h4>
-                          <p>Sui Yang Di</p>
+                          <h4>Sui Yang Di</h4>
+                          <p>隋炀帝</p>
+                          <img src="images/huoqubing.png" style="width:200px;height:100px;" />
                         </el-card>
                         </div>
                   </el-timeline-item>
-                  <el-timeline-item timestamp="the Tang Dynasty(618-907A.D.)" placement="top">
+                  <el-timeline-item timestamp="the Tang Dynasty(618-907A.D.)" placement="top" id="tang" @click="imgus(tang)" >
                     <div class="card-panel">
                     <el-card>
-                      <h4>敦煌画师</h4>
-                      <p>Dun Huang Hua Shi</p>
+                      <h4>Dun Huang Hua Shi</h4>
+                      <p>敦煌画师</p>
+                      <img src="images/huoqubing.png" style="width:200px;height:100px;" />
                     </el-card>
                     </div>
                   </el-timeline-item>
@@ -71,6 +89,7 @@
                         <el-card>
                           <h4>敦煌画师</h4>
                           <p>Dun Huang Hua Shi</p>
+                          <img src="images/huoqubing.png" style="width:200px;height:100px;" />
                         </el-card>
                         </div>
                   </el-timeline-item>
@@ -78,12 +97,14 @@
                     <el-card>
                       <h4>更新 Github 模板</h4>
                       <p>王小虎 提交于 2018/4/2 20:46</p>
+                      <img src="images/huoqubing.png" style="width:200px;height:100px;" />
                     </el-card>
                   </el-timeline-item>
                   <el-timeline-item timestamp="the Mordern time(1912-)" placement="top">
                     <el-card>
                       <h4>更新 Github 模板</h4>
                       <p>王小虎 提交于 2018/4/2 20:46</p>
+                      <img src="images/huoqubing.png" style="width:200px;height:100px;" />
                     </el-card>
                   </el-timeline-item>
                 </el-timeline>
@@ -92,24 +113,90 @@
 
     </div>  
     </div>
-<script src="personage.js"></script>
+
 
 <script>
-//     import ElementUI from 'element-ui';
-// import 'element-ui/lib/theme-chalk/index.css';
+
     var app=new Vue({
     el:'#app',
     data:function(){
         return{
             message:"this page is personage!"
         }
+    },
+    methods:{
+  
+    imgus:function(e){
+	  	document.getElementById(e).scrollIntoView({
+	  	  behavior: "smooth",  // 平滑过渡
+	  	  block:    "start"  // 上边框与视窗顶部平齐。默认值
+	  	});
+	  },
+
+
     }
+   
 })
 </script>
-   
+<script type="text/javascript">//让导航栏吸附到顶部
+   window.addEventListener('scroll', function(){
+ 	let t = $('body, html').scrollTop();   // 目前监听的是整个body的滚动条距离
+ 	if(t>190){
+		$('.ribbon').addClass('box-active')
+	}else{
+		$('.ribbon').removeClass('box-active')
+	}
+ })
+
+</script> 
+<!-- <script type="text/javascript">
+  $(function(){
+    var pro_top = $("#pro").offset().top;
+    var news_top = $("#news").offset().top;
+    var ser_top = $("#ser").offset().top;
+    var con_top = $("#con").offset().top;
+    var job_top = $("#job").offset().top;
+    //alert(tops);
+    $(window).scroll(function(){
+      var scroH = $(this).scrollTop();
+      if(scroH>=job_top){
+        set_cur(".job");
+      }else if(scroH>=con_top){
+        set_cur(".con");
+      }else if(scroH>=ser_top){
+        set_cur(".ser");
+      }else if(scroH>=news_top){
+        set_cur(".news");
+      }else if(scroH>=pro_top){
+        set_cur(".pro");
+      }
+    });
+    $(".nav li a").click(function() {
+      var el = $(this).attr('class');
+      $('html, body').animate({
+         scrollTop: $("#"+el).offset().top
+        },{
+             easing: 'easeOutSine',
+             duration: 300,
+             complete:function(){
+        }
+       });
+     });
+  });
+  
+  function set_cur(n){
+    if($(".nav a").hasClass("cur")){
+      $(".nav a").removeClass("cur");
+    }
+    $(".nav a"+n).addClass("cur");
+  }
+  </script>  -->
 </body>
 </html>
 <style lang="scss" scoped>
+  .personage{
+    margin-left:100px;
+  }
     .title{
         margin-left:100px;
         font-family: Microsoft YaHei;
