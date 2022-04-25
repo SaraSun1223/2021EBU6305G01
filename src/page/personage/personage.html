@@ -1,177 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>personage</title>
-    <link rel="stylesheet" href="../../js/element-ui/index.css">
-    <link rel="stylesheet" href="../../css/header.css">
-    <script src="../../js/vue.min.js"></script>
-    <script src="../../js/element-ui/index.js"></script>
-    <script src="../../js/jquery.min.js"></script> 
-    
-    
-   
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>personage</title>
+  <link rel="stylesheet" href="../../js/element-ui/index.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <script src="../../js/vue.min.js"></script>
+  <script src="../../js/element-ui/index.js"></script>
+  <script src="../../js/jquery.min.js"></script>
+
+
+
 </head>
+
 <body style="margin:0">
-    <div id="app">
-      <div class="header">
-        <span>The Silk Road</span>
-      </div>
-      <div class='ribbon' id="header">
-        <a href='../home/home.html'><span>Home</span></a>
-        <a href='../geography/geography.html'><span>Geography</span></a>
-        <a href='../culture/culture.html'><span>Culture</span></a>
-        <a href='../personage/personage.html' ><span style="background-color: #FFD204;">Personage</span></a>
-        <a href='../economics/economics.html'><span>Economics</span></a>
-        <a href='../politics/politics.html'><span>Politics</span></a>
-        <a href='../game/game.html'><span>Game</span></a>
+  <div id="app">
+    <div class="header">
+      <span>The Silk Road</span>
+    </div>
+    <div class='ribbon' id="header">
+      <a href='../home/home.html'><span>Home</span></a>
+      <a href='../geography/geography.html'><span>Geography</span></a>
+      <a href='../culture/culture.html'><span>Culture</span></a>
+      <a href='../personage/personage.html'><span style="background-color: #FFD204;height:65px;">Personage</span></a>
+      <a href='../economics/economics.html'><span>Economics</span></a>
+      <a href='../politics/politics.html'><span>Politics</span></a>
+      <a href='../game/game.html'><span>Game</span></a>
     </div>
     <div class='personage'>
-              <!-- <p>{{message}}</p>  -->
-              <p class="title">Personage</p> 
-              <div class="block">
-                <el-timeline>
-                  <el-timeline-item timestamp="the Western Han Dynasty(202B.C.-8A.D.)" placement="top" >
-                    <div class="card-panel">
-                    <el-card>
-                      <h4>Zhang Qian</h4>
-                      <p>张骞</p>
-                      <img src="images/zhangqian.png" style="width:200px;height:100px;" />
-                    </el-card>
-                    <el-card>
-                        <h4>Huo Qu Bing</h4>
-                        <p>霍去病</p>
-                        <img src="images/huoqubing.png" style="width:200px;height:100px;" />
-                      </el-card>
-                    <el-card>
-                        <h4>Han Wu Di</h4>
-                        <p>汉武帝</p>
-                        <img src="images/huoqubing.png" style="width:200px;height:100px;" />
-                    </el-card>
-                    </div>
-                  </el-timeline-item>
-                  <el-timeline-item timestamp="the Jin Dynasty(265-420A.D.)" placement="top" >
-                    <div class="card-panel">
-                        <el-card>
-                          <h4>Jiu Mo Luo Shen</h4>
-                          <p>鸠摩罗什</p>
-                          <img src="images/huoqubing.png" style="width:200px;height:100px;" />
-                        </el-card>
-                        <el-card>
-                            <h4>He Xi Ru Jia</h4>
-                            <p>河西儒家</p>
-                            <img src="images/huoqubing.png" style="width:200px;height:100px;" />
-                        </el-card>
-                        </div>
-                  </el-timeline-item>
-                  <el-timeline-item timestamp="the Sui Dynasty(581-618A.D.)" placement="top" @click="beCenter()">
-                    <div class="card-panel">
-                        <el-card>
-                          <h4>Sui Yang Di</h4>
-                          <p>隋炀帝</p>
-                          <img src="images/huoqubing.png" style="width:200px;height:100px;" />
-                        </el-card>
-                        </div>
-                  </el-timeline-item>
-                  <el-timeline-item timestamp="the Tang Dynasty(618-907A.D.)" placement="top" id="tang" @click="imgus(tang)" >
-                    <div class="card-panel">
-                    <el-card>
-                      <h4>Dun Huang Hua Shi</h4>
-                      <p>敦煌画师</p>
-                      <img src="images/huoqubing.png" style="width:200px;height:100px;" />
-                    </el-card>
-                    </div>
-                  </el-timeline-item>
-                  <el-timeline-item timestamp="the Yuan Dynasty(1271-1368A.D.)" placement="top">
-                    <div class="card-panel">
-                        <el-card>
-                          <h4>敦煌画师</h4>
-                          <p>Dun Huang Hua Shi</p>
-                          <img src="images/huoqubing.png" style="width:200px;height:100px;" />
-                        </el-card>
-                        </div>
-                  </el-timeline-item>
-                  <el-timeline-item timestamp="the Ming and Qing Dynasties(1368-1912A.D.)" placement="top">
-                    <el-card>
-                      <h4>更新 Github 模板</h4>
-                      <p>王小虎 提交于 2018/4/2 20:46</p>
-                      <img src="images/huoqubing.png" style="width:200px;height:100px;" />
-                    </el-card>
-                  </el-timeline-item>
-                  <el-timeline-item timestamp="the Mordern time(1912-)" placement="top">
-                    <el-card>
-                      <h4>更新 Github 模板</h4>
-                      <p>王小虎 提交于 2018/4/2 20:46</p>
-                      <img src="images/huoqubing.png" style="width:200px;height:100px;" />
-                    </el-card>
-                  </el-timeline-item>
-                </el-timeline>
-              </div>
+      <!-- <p>{{message}}</p>  -->
+      <p class="title">Personage</p>
+      <div class="block">
+        <el-timeline>
+          <el-timeline-item class="han" id="han" timestamp="the Western Han Dynasty(202B.C.-8A.D.)" placement="top"
+            @click="changNav('han')">
+            <div class="card-panel">
+              <el-card>
+                <h4>Zhang Qian</h4>
+                <p>张骞</p>
+                <img src="images/zhangqian.png" style="width:200px;height:100px;" />
+              </el-card>
+              <el-card>
+                <h4>Huo Qu Bing</h4>
+                <p>霍去病</p>
+                <img src="images/huoqubing.png" style="width:200px;height:100px;" />
+              </el-card>
+              <el-card>
+                <h4>Han Wu Di</h4>
+                <p>汉武帝</p>
+                <img src="images/huoqubing.png" style="width:200px;height:100px;" />
+              </el-card>
+            </div>
+          </el-timeline-item>
+          <div id="show-box"></div>
+          <el-timeline-item class="jin" id="jin" timestamp="the Jin Dynasty(265-420A.D.)" placement="top">
+            <div class="card-panel">
+              <el-card>
+                <h4>Jiu Mo Luo Shen</h4>
+                <p>鸠摩罗什</p>
+                <img src="images/huoqubing.png" style="width:200px;height:100px;" />
+              </el-card>
+              <el-card>
+                <h4>He Xi Ru Jia</h4>
+                <p>河西儒家</p>
+                <img src="images/huoqubing.png" style="width:200px;height:100px;" />
+              </el-card>
+            </div>
+          </el-timeline-item>
+          <el-timeline-item class="sui" id="sui" timestamp="the Sui Dynasty(581-618A.D.)" placement="top"
+            onclick="anchor('#sui','#sui',1000)">
+            <div class="card-panel">
+              <el-card>
+                <h4>Sui Yang Di</h4>
+                <p>隋炀帝</p>
+                <img src="images/huoqubing.png" style="width:200px;height:100px;" />
+              </el-card>
+            </div>
+          </el-timeline-item>
+          <el-timeline-item class="tang" id="tang" timestamp="the Tang Dynasty(618-907A.D.)" placement="top" id="tang"
+            @click="imgus(tang)">
+            <div class="card-panel">
+              <el-card>
+                <h4>Dun Huang Hua Shi</h4>
+                <p>敦煌画师</p>
+                <img src="images/huoqubing.png" style="width:200px;height:100px;" />
+              </el-card>
+            </div>
+          </el-timeline-item>
+          <el-timeline-item class="yuan" id="yuan" timestamp="the Yuan Dynasty(1271-1368A.D.)" placement="top">
+            <div class="card-panel">
+              <el-card>
+                <h4>敦煌画师</h4>
+                <p>Dun Huang Hua Shi</p>
+                <img src="images/huoqubing.png" style="width:200px;height:100px;" />
+              </el-card>
+            </div>
+          </el-timeline-item>
+          <el-timeline-item class="mq" id="mq" timestamp="the Ming and Qing Dynasties(1368-1912A.D.)" placement="top">
+            <el-card>
+              <h4>更新 Github 模板</h4>
+              <p>王小虎 提交于 2018/4/2 20:46</p>
+              <img src="images/huoqubing.png" style="width:200px;height:100px;" />
+            </el-card>
+          </el-timeline-item>
+          <el-timeline-item class="modern" id="modern" timestamp="the Mordern time(1912-)" placement="top">
+            <el-card>
+              <h4>更新 Github 模板</h4>
+              <p>王小虎 提交于 2018/4/2 20:46</p>
+              <img src="images/huoqubing.png" style="width:200px;height:100px;" />
+            </el-card>
+          </el-timeline-item>
+        </el-timeline>
+      </div>
     </div>
 
-    </div>  
-    </div>
+  </div>
+  </div>
 
 
-<script>
+  <script>
 
-    var app=new Vue({
-    el:'#app',
-    data:function(){
-        return{
-            message:"this page is personage!"
+    var app = new Vue({
+      el: '#app',
+      data: function () {
+        return {
+          message: "this page is personage!"
         }
-    },
-    methods:{
-  
-    imgus:function(e){
-	  	document.getElementById(e).scrollIntoView({
-	  	  behavior: "smooth",  // 平滑过渡
-	  	  block:    "start"  // 上边框与视窗顶部平齐。默认值
-	  	});
-	  },
+      },
+      methods: {
+        changNav(index) {
+          this.idx = index;
+          VueScrollTo.scrollTo(document.getElementById(index), 1000, {
+            offset: -50,
+          });
+        },
 
 
+
+        // imgus:function(e){
+        // 	document.getElementById(e).scrollIntoView({
+        // 	  behavior: "smooth",  // 平滑过渡
+        // 	  block:    "start"  // 上边框与视窗顶部平齐。默认值
+        // 	});
+        // },
+
+
+      }
+
+    })
+  </script>
+  <script type="text/javascript">//让导航栏吸附到顶部
+    window.addEventListener('scroll', function () {
+      let t = $('body, html').scrollTop();   // 目前监听的是整个body的滚动条距离
+      if (t > 190) {
+        $('.ribbon').addClass('box-active')
+      } else {
+        $('.ribbon').removeClass('box-active')
+      }
+    })
+
+  </script>
+  <script>
+    function anchor(_startElem, _endElem, _speed) {
+      $(_startElem).click(function () {
+        jQuery(window).unbind("scroll");
+        console.log("to offset:" + $(_endElem).offset().top)
+        $('html,body').animate({
+          scrollTop: $(_endElem).offset().top
+        },
+          _speed);
+      });
     }
-   
-})
-</script>
-<script type="text/javascript">//让导航栏吸附到顶部
-   window.addEventListener('scroll', function(){
- 	let t = $('body, html').scrollTop();   // 目前监听的是整个body的滚动条距离
- 	if(t>190){
-		$('.ribbon').addClass('box-active')
-	}else{
-		$('.ribbon').removeClass('box-active')
-	}
- })
+  </script>
+  <script>
+    //点击回到顶部
+    let click = document.getElementById('han');
+    let show = document.getElementById('show-box');//显示和隐藏的盒子
+    click.onclick = function () {
+      document.documentElement.scrollTop = 348;
+      show.style.display = 'block';
+    }
 
-</script> 
-<!-- <script type="text/javascript">
+
+  </script>
+
+
+
+  <!-- <script type="text/javascript">
   $(function(){
-    var pro_top = $("#pro").offset().top;
-    var news_top = $("#news").offset().top;
-    var ser_top = $("#ser").offset().top;
-    var con_top = $("#con").offset().top;
-    var job_top = $("#job").offset().top;
-    //alert(tops);
+    var han_top = $("#han").offset().top;
+    var jin_top = $("#jin").offset().top;
+    var sui_top = $("#sui").offset().top;
+    var tang_top = $("#tang").offset().top;
+    var yuan_top = $("#yuan").offset().top;
+    var mq_top = $("#mq").offset().top;
+    var modern_top = $("#modern").offset().top;
     $(window).scroll(function(){
       var scroH = $(this).scrollTop();
-      if(scroH>=job_top){
-        set_cur(".job");
-      }else if(scroH>=con_top){
-        set_cur(".con");
-      }else if(scroH>=ser_top){
-        set_cur(".ser");
-      }else if(scroH>=news_top){
-        set_cur(".news");
-      }else if(scroH>=pro_top){
-        set_cur(".pro");
-      }
+      if(scroH>=han_top){set_cur(".han");}
+      else if(scroH>=jin_top){set_cur(".jin");}
+      else if(scroH>=sui_top){set_cur(".sui");}
+      else if(scroH>=tang_top){set_cur(".tang");}
+      else if(scroH>=yuan_top){set_cur(".yuan");}
+      else if(scroH>=mq_top){set_cur(".mq");}
+      else if(scroH>=modern_top){set_cur(".modern");}
     });
-    $(".nav li a").click(function() {
+    $(".el-timeline-item").click(function() {
       var el = $(this).attr('class');
       $('html, body').animate({
          scrollTop: $("#"+el).offset().top
@@ -192,19 +229,29 @@
   }
   </script>  -->
 </body>
+
 </html>
 <style lang="scss" scoped>
-  .personage{
-    margin-left:100px;
+  .personage {
+    margin-left: 100px;
   }
-    .title{
-        margin-left:100px;
-        font-family: Microsoft YaHei;
-        font-size: 48px;
-        color:#3E3E3E;
-    }
-    .card-panel{
-    margin-right:50px;
-    display:flex;
-    }
+
+  .title {
+    margin-left: 100px;
+    font-family: Microsoft YaHei;
+    font-size: 48px;
+    color: #3E3E3E;
+  }
+
+  .card-panel {
+    margin-right: 50px;
+    display: flex;
+  }
+
+  #show-box {
+    width: 100px;
+    height: 400px;
+    background: #FFD204;
+    display: none;
+  }
 </style>

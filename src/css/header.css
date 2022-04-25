@@ -13,34 +13,16 @@
 .ribbon {
     width:100%;background-color: #f7e4aa;
     white-space: nowrap;
-    /* display:inline-block; */display:flex;
+    display:flex;/*inline-block;*/
     position: sticky;z-index: 99;
     position: -webkit-sticky;   
-    /* top: 10px;                         fuckkkkkkkkkkkkkkkkkkkk! */
-    /* display:flex; */
-    }
-    
-    .ribbon:after, .ribbon:before {
-    margin-top:0px;
-    content: “”;
-    float:left;
-    border:30px solid #fff;
-    }
-    
-    .ribbon:after {
-    border-right-color:transparent;
-    }
-    
-    .ribbon:before {
-    border-left-color:transparent;
-    }
-    
+}
     .ribbon a:link, .ribbon a:visited {
     color:#000;
     text-decoration:none;
     float:left;
-    height:70px;
-    overflow:hidden;
+    height:60px;/*字的高度，字撑起浅黄*/
+    /* overflow:hidden; */
     }
     
     .ribbon span {
@@ -48,36 +30,26 @@
     display:inline-block;
     line-height:60px;
     font-size:40px;
-    padding:0 55px;
+    /* margin:0 55px; */
+    padding:0 56px 0 56px;
     /* margin-top:10px; */margin-top:0px;
     position:relative;
     border-right:px solid #FFD204;
-    -webkit-transition: background-color 0.2s, margin-top 0.2s; /* Saf3.2+, Chrome */
-    -moz-transition: background-color 0.2s, margin-top 0.2s; /* FF4+ */
-    -ms-transition: background-color 0.2s, margin-top 0.2s; /* IE10 */
-    -o-transition: background-color 0.2s, margin-top 0.2s; /* Opera 10.5+ */
-    transition: background-color 0.2s, margin-top 0.2s;
+    /* -webkit-transition: background-color 0.2s, margin-top 0.2s; Saf3.2+, Chrome */
+    /* -moz-transition: background-color 0.2s, margin-top 0.2s; FF4+ */
+    /* -ms-transition: background-color 0.2s, margin-top 0.2s; IE10 */
+    /* -o-transition: background-color 0.2s, margin-top 0.2s; Opera 10.5+ */
+    /* transition: background-color 0.2s, margin-top 0.2s; */
     }
-    
-    .ribbon a:hover span {
-    background:#FFD204;
-    margin-top:0;
+    .ribbon a:after{
+        position:relative;
+        content:'';display:flex;
+        background: linear-gradient(to left,rgba(255,210,4,0) 50%,rgba(255,210,4,0.9) 50%);
+        color:#000;
+        background-size: 300% 100%;background-position:right bottom;height:5px;width: 100%;
+        transition:all 1s;-webkit-transition: all 1s;
     }
-    
-    .ribbon span:before {
-    content: “”;
-    position:absolute;
-    top:60px;
-    left:0;
-    border-right:10px solid #9B8651;
-    border-bottom:10px solid #fff;
+    .ribbon :hover:after{
+        background-position: left bottom;
     }
-    
-    .ribbon span:after {
-    content: “”;
-    position:absolute;
-    top:60px;
-    right:0;
-    border-left:10px solid #9B8651;
-    border-bottom:10px solid #fff;
-    }
+   
