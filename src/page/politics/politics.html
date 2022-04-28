@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../../css/header.css"> <!-- zrq加的 -->
-    <script src="../../js/jquery.min.js"></script> <!-- zrq加的 -->
+    
+
  <style>
-   .hide{
-            top: -60px;
-        }  
+     
     .main{height: 50px;border: 1px green;}
     /* 按钮设置 */
     button:active{ box-shadow: 0 5px #666;transform: translateY(4px);}
@@ -17,7 +15,7 @@
         position:absolute;
         left:10%;top:85%;
         height: 12%; width: 73%;
-        background-image: url(../../img/TimerShaft.png);
+        background-image: url(../../img/T.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -77,7 +75,7 @@
         border-radius: 50%;
         position:absolute;
         left:23%;top:51%;
-        background-image: url(../../img/Horse.png);
+        background-image: url(../../img/big-horse.png);
         background-size: cover;
     }
     #btn_CirclerB3{
@@ -85,7 +83,7 @@
         border-radius: 50%;
         position:absolute;
         left:52%;top:55%;
-        background-image: url(../../img/Trade.png);
+        background-image: url(../../img/rich.png);
         background-size: cover;
     }
     /* 第三张网页的圆形按钮,B代表第二页 */
@@ -109,8 +107,8 @@
         height: 6%; width: 3%;
         border-radius: 50%;
         position:absolute;
-        left:52%;top:55%;
-        background-image: url(../../img/Trade.png);
+        left:75.7%;top:29%;
+        background-image: url(../../img/palace.png);
         background-size: cover;
     }
     /* 第四张网页的圆形按钮,B代表第二页 */
@@ -118,15 +116,15 @@
         height: 6%; width: 3%;
         border-radius: 50%;
         position:absolute;
-        left:7%;top:60%;
-        background-image: url(../../img/1.png);
+        left:44.5%;top:28%;
+        background-image: url(../../img/universe.png);
         background-size: cover;
     }
     #btn_CirclerD2{
         height: 6%; width: 3%;
         border-radius: 50%;
         position:absolute;
-        left:23%;top:51%;
+        left:43%;top:38%;
         background-image: url(../../img/Horse.png);
         background-size: cover;
     }
@@ -134,8 +132,8 @@
         height: 6%; width: 3%;
         border-radius: 50%;
         position:absolute;
-        left:52%;top:55%;
-        background-image: url(../../img/Trade.png);
+        left:85%;top:40%;
+        background-image: url(../../img/Dragon.png);
         background-size: cover;
     }
     
@@ -183,39 +181,39 @@
     .textarea_C1{
         display: none;
         position:absolute;
-        left:9%;top:45%;
-        width: 10%;height: 14%;
+        left:20%;top:36%;
+        width: 15%;height: 18%;
     }
     .textarea_C2{
         display: none;
         position:absolute;
-        left:25%;top:37%;
-        width: 10%;height: 14%;
+        left:29%;top:31%;
+        width: 20%;height: 25%;
     }
     .textarea_C3{
         display: none;
         position:absolute;
-        left:54%;top:40%;
-        width: 10%;height: 14%;
+        left:67%;top:35%;
+        width: 20%;height: 24%;
         
     }
     /* 第四张网页的文本框，A代表第一页 */
     .textarea_D1{
         display: none;
         position:absolute;
-        left:9%;top:45%;
+        left:46.5%;top:34%;
         width: 10%;height: 14%;
     }
     .textarea_D2{
         display: none;
         position:absolute;
-        left:25%;top:37%;
+        left:33%;top:44%;
         width: 10%;height: 14%;
     }
     .textarea_D3{
         display: none;
         position:absolute;
-        left:54%;top:40%;
+        left:75%;top:45%;
         width: 10%;height: 14%;
         
     }
@@ -223,21 +221,10 @@
  
 </head>
 <!-- 背景图片 -->
-<body style = "margin:0;
-                background-image: url(../../img/MainMap.png);
+<body style = "background-image: url(../../img/MainMap.png);
                 background-repeat: no-repeat;
-                background-size: 100%";
-                >
+                background-size: 100%";>
    
-      <div class='ribbon' id="header"><!-- zrq加的 -->
-        <a href='../home/home.html'><span>Home</span></a>
-        <a href='../geography/geography.html'><span>Geography</span></a>
-        <a href='../culture/culture.html'><span>Culture</span></a>
-        <a href='../personage/personage.html' ><span>Personage</span></a>
-        <a href='../economics/economics.html'><span>Economics</span></a>
-        <a href='../politics/politics.html'><span style="background-color: #FFD204;">Politics</span></a>
-        <a href='../game/game.html'><span>Game</span></a>
-      </div>
     <div class="main">       
         <script>
             /* 时间轴 */
@@ -358,7 +345,7 @@
         ></div> -->
         <!-- 第一页的组件 -->
         <div>
-            <button class="TimerShaft"></button>
+            <div class="TimerShaft"></div>
             <button class="btn1" id="" onclick="Show_FirstPage()">Precursors</button>
             <button class="btn2" onclick="Show_SecondPage()">Initiation in China</button>
             <button class="btn3" onclick="Show_ThirdPage()">Evolution</button>
@@ -388,9 +375,15 @@
             <button id="btn_CirclerC1" onmouseover="Show_Info('C1')" onmouseleave="Show_Info('C1')" style="display: none;"></button>
             <button id="btn_CirclerC2" onmouseover="Show_Info('C2')" onmouseleave="Show_Info('C2')" style="display: none;"></button>
             <button id="btn_CirclerC3" onmouseover="Show_Info('C3')" onmouseleave="Show_Info('C3')" style="display: none;"></button>
-            <textarea class = "textarea_C1"name="" id="C1" cols="30" rows="10" >Roman Empire (30 BCE-3rd century CE)</textarea>
-            <textarea class = "textarea_C2"name="" id="C2" cols="30" rows="10" >Byzantine Empire (6th-14th centuries)</textarea>
-            <textarea class = "textarea_C3"name="" id="C3" cols="30" rows="10" >Tang dynasty (7th century)</textarea>
+            <textarea class = "textarea_C1"name="" id="C1" cols="30" rows="10" >Roman Empire (30 BCE-3rd century CE)
+            Soon after the Roman conquest of Egypt in 30 BCE, regular communications and trade between China, Southeast Asia, India, the Middle East, Africa, and Europe blossomed on an unprecedented scale.  The Roman Empire inherited eastern trade routes that were part of the Silk Road from the Evolution.
+            </textarea>
+            <textarea class = "textarea_C2"name="" id="C2" cols="30" rows="10" >Byzantine Empire (6th-14th centuries)
+                the Byzantine Emperor Justinian (ruled 527- 565) as spies on the Silk Road from Constantinople to China and back to steal the silkworm eggs, resulting in silk production in the Mediterranean, particularly in Thrace in northern Greece, and giving the Byzantine Empire a monopoly on silk production in medieval Europe.  In 568 the Byzantine ruler Justin II was greeted by a Sogdian embassy representing Istämi, ruler of the First Turkic Khaganate, who formed an alliance with the Byzantines against Khosrow I of the Sasanian Empire that allowed the Byzantines to bypass the Sasanian merchants and trade directly with the Sogdians for purchasing Chinese silk.
+            </textarea>
+            <textarea class = "textarea_C3"name="" id="C3" cols="30" rows="10" >Tang dynasty (7th century)
+                The Tang dynasty conquered and subdued Central Asia during the 640s and 650s.During Emperor Taizong's reign alone, large campaignswere launched against not only the Göktürks, but also separatecampaigns against the Tuyuhun, the oasis states, and the Xueyantuo.Under Emperor Taizong, Tang general Li Jing conqueredthe Eastern Turkic Khaganate. Under Emperor Gaozong,Tang general Su Dingfang conquered the Western TurkicKhaganate, an important ally of the Byzantine empire.After these conquests, the Tang dynasty fully controlledthe Xiyu, which was the strategic location astride the SilkRoad. This led the Tang dynasty to reopen the SilkRoad, with this portion named the Tang-Tubo Road("Tang-Tibet Road") in many historical texts.
+            </textarea>
         </div>
         <!-- 第四页的组件 -->
         <div>
@@ -402,23 +395,7 @@
             <textarea class = "textarea_D3"name="" id="D3" cols="30" rows="10" ></textarea>
         </div>
     </div>
-    <script>
-    $(function(){
-        window.addEventListener('scroll', this.handleScroll)
-            $(window).scroll(function() {
-            var end_height = $(document).scrollTop();//触发滚动事件后，滚动条的高度（本次高度）
-            if (end_height > navigation_height){ //触发后的高度 与 元素的高度对比
-                $('.header').addClass('hide');
-            }else {
-                $('.header').removeClass('hide');
-            }
-        });
-    });
-</script>
 </body>
 </html>
-
-
-
 
 
