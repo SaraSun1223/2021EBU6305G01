@@ -1,6 +1,6 @@
 # EBU6305 
 ## Group Number : 2021EBU6305G01
-## Project Title :xxxxx 
+## Project Title :The Silk Road Museum
 ## Members
 XiaoyiLiang,2019213029,190898395,1506311900@qq.com  
 RuoqiZhang,2019213236,190900311,424319238@qq.com  
